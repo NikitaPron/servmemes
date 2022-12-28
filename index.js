@@ -6,15 +6,15 @@ const path = require("path");
 const server = http.createServer(app);
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:2500",
     methods: ["GET", "POST"],
   },
 });
 
 app.use(express.static(path.join(__dirname, "static")));
 
-server.listen(80, () => {
-  console.log("listening on *:3000");
+server.listen(2500, () => {
+  console.log("listening on *:2500");
 });
 
 // CLIENT EVENTS
