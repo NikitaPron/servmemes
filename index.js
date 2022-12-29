@@ -6,7 +6,7 @@ const path = require("path");
 const server = http.createServer(app);
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:2500",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
   },
 });
@@ -1119,7 +1119,6 @@ function changeSituation() {
     JSON.stringify({
       situation: currentSituation,
       cards: shuffle(imgs),
-      count: clients.size,
     })
   );
 }
