@@ -6,7 +6,7 @@ const path = require("path");
 const server = http.createServer(app);
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:2500",
     methods: ["GET", "POST"],
   },
 });
@@ -28,7 +28,7 @@ const NEW_SITUATION = "NEW_SITUATION";
 const NEW_MUSIC = "NEW_MUSIC";
 const ONE_MINUTE_MUSIC_MISTAKE = "ONE_MINUTE_MUSIC_MISTAKE";
 
-let timingSituation = 7000;
+let timingSituation = 15000;
 
 const clients = new Set();
 const imgs = [
